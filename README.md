@@ -1,44 +1,15 @@
-# Market Dashboard
+# UBS Market Dashboard — corrected Streamlit navigation
 
-### Interactive Financial Markets Dashboard | Python & Streamlit
+Streamlit automatically creates navigation when a folder is named `pages`.
+This project uses `asset_views` instead, so only the custom sidebar is shown.
 
-An interactive financial markets dashboard developed by **Sacha Olry de Labry**, designed to explore market trends, monitor key asset classes, and perform financial analysis through a single interface.
+## Install on Windows
 
-## Features
+1. Stop Streamlit with Ctrl+C.
+2. In your existing `market_dashboard_sacha` folder, **DELETE or rename the OLD `pages` folder**. This is essential: leaving it there will keep the extra Streamlit menu.
+3. Copy `app.py`, `config.py`, `data.py`, `analytics.py`, `ui.py`, `ui_theme.py`, and the entire new `asset_views` folder from this ZIP into `market_dashboard_sacha`.
+4. Keep your existing `pyproject.toml`, `uv.lock`, and `.venv`.
+5. Run `uv run streamlit run app.py`.
 
-**1. Equities**
-- Performance tracking of major global equity indices
-- Historical price visualization
-- Risk metrics: annualized volatility, maximum drawdown, Value at Risk (VaR), and Sharpe ratio
-
-**2. Fixed Income**
-- Government bond yield monitoring
-- US Treasury yield curve visualization
-- Historical 10-year government bond yield analysis
-
-**3. Commodities**
-- Price monitoring across major commodities
-- Historical price trends
-- Annual return analysis
-
-**4. Foreign Exchange**
-- Interactive FX spot rate matrix
-- Historical exchange rate visualization
-- Analysis of major currency pairs
-
-**5. Single Stock Analysis**
-- Individual equity price analysis
-- Comparison against market benchmarks or other stocks
-- Company fundamentals and valuation metrics
-
-## Technologies
-
-- **Python** — Data processing and financial calculations
-- **Streamlit** — Interactive web application
-- **Pandas & NumPy** — Data manipulation and numerical analysis
-- **Plotly** — Interactive financial charts
-- **Yahoo Finance & FRED** — Financial market data sources
-
-## Data Disclaimer
-
-Market data may be delayed, incomplete, or subject to revisions.
+The five dashboard sections still use the existing custom sidebar.
+Syntax and local import references have been checked, but live Streamlit execution with market data has not been tested.
