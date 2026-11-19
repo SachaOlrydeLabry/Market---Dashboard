@@ -1,15 +1,33 @@
-# UBS Market Dashboard — corrected Streamlit navigation
+# Financial Markets Dashboard
 
-Streamlit automatically creates navigation when a folder is named `pages`.
-This project uses `asset_views` instead, so only the custom sidebar is shown.
+### About me
 
-## Install on Windows
+I'm Sacha Olry de Labry, a Master's student in Financial Markets & Investments at SKEMA Business School, with a strong interest in Global Markets, particularly Sales & Trading.
 
-1. Stop Streamlit with Ctrl+C.
-2. In your existing `market_dashboard_sacha` folder, **DELETE or rename the OLD `pages` folder**. This is essential: leaving it there will keep the extra Streamlit menu.
-3. Copy `app.py`, `config.py`, `data.py`, `analytics.py`, `ui.py`, `ui_theme.py`, and the entire new `asset_views` folder from this ZIP into `market_dashboard_sacha`.
-4. Keep your existing `pyproject.toml`, `uv.lock`, and `.venv`.
-5. Run `uv run streamlit run app.py`.
+### Why I built this dashboard
 
-The five dashboard sections still use the existing custom sidebar.
-Syntax and local import references have been checked, but live Streamlit execution with market data has not been tested.
+I developed this dashboard as a personal project to follow financial markets, strengthen my market knowledge, and improve my Python skills.
+
+Rather than switching between multiple websites, I wanted a single tool to monitor different asset classes, understand market movements, and perform basic financial analysis.
+
+I also use it to prepare for interviews and develop my market intuition.
+
+### What does it do?
+
+Built with **Python and Streamlit**, the dashboard covers five areas:
+
+- **Equities:** Index performance, volatility, Sharpe ratio, Value at Risk (VaR), and drawdowns.
+- **Bonds:** Government bond yields across countries and the US Treasury yield curve.
+- **Commodities:** Price movements and historical trends.
+- **Currencies:** FX rates, currency comparisons, and historical performance.
+- **Single Stock Analysis:** Company fundamentals, financial ratios, and stock performance.
+
+Market data is retrieved mainly from **Yahoo Finance**, alongside **FRED** and the **Bank of England**.
+
+### How it works
+
+The dashboard automatically retrieves market data, processes it using Python libraries such as Pandas and NumPy, and displays interactive charts and financial metrics through Streamlit.
+
+The code is organized into separate modules for data extraction, financial calculations, visualization, and each asset class.
+
+This is a personal learning project that I plan to keep improving as I develop my programming skills and financial markets knowledge.
